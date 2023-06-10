@@ -2,13 +2,13 @@ import { AggregateRoot } from './AggregateRoot';
 import { Id } from './valueobjects/Id';
 
 export class List extends AggregateRoot {
-  private name: string;
-  private products: string[];
+  name: string; //TODO - Convert to value object
+  readonly products: string[]; //TODO - Convert to value object
 
-  private constructor(id: Id, name: string) {
+  private constructor(id: Id, name: string, products?: string[]) {
     super(id);
     this.name = name;
-    this.products = [];
+    this.products = products ? products : [];
   }
 
   public static create(name: string): List {
@@ -26,5 +26,9 @@ export class List extends AggregateRoot {
 
   listProducts(): string[] {
     return this.products;
+  }
+
+  static toDomain(id: string, name: string, products: string[]): List {
+    return new List(new Id(id), name, products);
   }
 }
