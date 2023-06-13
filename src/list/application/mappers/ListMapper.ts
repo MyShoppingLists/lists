@@ -1,4 +1,4 @@
-import { List } from 'src/list/domain/List';
+import { List } from '../../domain/List';
 import { ListDto } from '../dtos/ListDto';
 
 export class ListMapper {

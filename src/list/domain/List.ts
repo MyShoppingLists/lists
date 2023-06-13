@@ -11,9 +11,9 @@ export class List extends AggregateRoot {
     this.products = products ? products : [];
   }
 
-  public static create(name: string): List {
-    const id = new Id();
-    return new List(id, name);
+  public static create(name: string, id?: string): List {
+    const idVO = new Id(id);
+    return new List(idVO, name);
   }
 
   addProduct(product: string): void {

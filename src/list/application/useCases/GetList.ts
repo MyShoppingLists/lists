@@ -1,7 +1,7 @@
 import { Inject, Injectable } from '@nestjs/common';
-import { IListRepository } from 'src/list/domain/interfaces/IListRepository';
 import { ListDto } from '../dtos/ListDto';
 import { ListMapper } from '../mappers/ListMapper';
+import { IListRepository } from '../../domain/interfaces/IListRepository';
 
 @Injectable()
 export class GetList {
@@ -13,6 +13,7 @@ export class GetList {
 
   async run(listId: string): Promise<ListDto> {
     console.info(`INFO - Getting list...`);
+
     const list = await this.listRepository.getList(listId);
     return ListMapper.toDto(list);
   }
