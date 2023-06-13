@@ -1,0 +1,10 @@
+{
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "testMatch": ["<rootDir>/test/**/*.test.ts"],
+  "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json"],
+  "moduleNameMapper": {
+    "^@list/(.*)$": "<rootDir>/src/list/$1"
+  },
+  "resetMocks": true
+}
