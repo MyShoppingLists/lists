@@ -17,7 +17,7 @@ describe('Get list use case', () => {
     const result = await getListUseCase.run(listId);
 
     // Then
-    expect(result).toEqual({ id: '1', name: 'list2', products: [] });
+    expect(result).toEqual({ id: '1', name: 'list1', products: [] });
     expect(listRepositoryMock.getList).toHaveBeenCalledWith(listId);
   });
 });
