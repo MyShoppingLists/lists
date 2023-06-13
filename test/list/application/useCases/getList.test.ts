@@ -4,7 +4,7 @@ import { List } from '@list/domain/List';
 
 const list = List.create('list1', '1');
 
-describe('Get list use case', () => {
+describe('Get list use case: ', () => {
   beforeEach(() => {
     listRepositoryMock.getList.mockResolvedValue(list);
   });
@@ -19,5 +19,10 @@ describe('Get list use case', () => {
     // Then
     expect(result).toEqual({ id: '1', name: 'list1', products: [] });
     expect(listRepositoryMock.getList).toHaveBeenCalledWith(listId);
+  });
+  it('should sum 2 nums', () => {
+    const num = 2 + 3;
+
+    expect(num).toBe(5);
   });
 });
