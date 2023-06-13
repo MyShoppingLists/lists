@@ -15,6 +15,7 @@ export class GetList {
     console.info(`INFO - Getting list...`);
 
     const list = await this.listRepository.getList(listId);
+    list.name = 'hola';
     return ListMapper.toDto(list);
   }
 }
