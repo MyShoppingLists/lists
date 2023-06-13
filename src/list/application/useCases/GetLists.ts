@@ -1,7 +1,7 @@
 import { Inject, Injectable } from '@nestjs/common';
-import { IListRepository } from 'src/list/domain/interfaces/IListRepository';
 import { ListDto } from '../dtos/ListDto';
 import { ListMapper } from '../mappers/ListMapper';
+import { IListRepository } from '@list/domain/interfaces/IListRepository';
 
 @Injectable()
 export class GetLists {

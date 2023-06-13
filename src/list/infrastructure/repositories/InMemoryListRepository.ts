@@ -1,5 +1,5 @@
-import { List } from 'src/list/domain/List';
-import { IListRepository } from 'src/list/domain/interfaces/IListRepository';
+import { List } from '@list/domain/List';
+import { IListRepository } from '@list/domain/interfaces/IListRepository';
 
 export class InMemoryListRepository implements IListRepository {
   private lists: List[] = [List.create('name list1')];

@@ -1,6 +1,6 @@
+import { List } from '@list/domain/List';
+import { IListRepository } from '@list/domain/interfaces/IListRepository';
 import { Inject, Injectable } from '@nestjs/common';
-import { List } from 'src/list/domain/List';
-import { IListRepository } from 'src/list/domain/interfaces/IListRepository';
 
 @Injectable()
 export class CreateList {

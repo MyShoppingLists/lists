@@ -1,8 +1,8 @@
 import { Controller, Get, Param, Patch, Post } from '@nestjs/common';
 import { GetList } from '../../application/useCases/GetList';
-import { ListDto } from 'src/list/application/dtos/ListDto';
-import { CreateList } from 'src/list/application/useCases/CreateList';
-import { AddProductToList } from 'src/list/application/useCases/AddProduct';
+import { CreateList } from '@list/application/useCases/CreateList';
+import { AddProductToList } from '@list/application/useCases/AddProduct';
+import { ListDto } from '@list/application/dtos/ListDto';
 
 @Controller()
 export class ListController {

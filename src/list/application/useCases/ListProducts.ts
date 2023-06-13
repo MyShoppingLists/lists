@@ -1,4 +1,4 @@
-import { List } from 'src/list/domain/List';
+import { List } from '@list/domain/List';
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
