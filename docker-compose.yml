@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  list-db:
+    image: arm64v8/mongo:4.2
+    platform: linux/arm64/v8
+    container_name: list-db
+    ports:
+      - 27017:27017

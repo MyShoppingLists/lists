@@ -1,7 +1,7 @@
 import { List } from '../List';
 
 export interface IListRepository {
-  save(): Promise<void>;
-  getList(): Promise<List>;
+  create(list: List): Promise<void>;
+  getList(id: string): Promise<List>;
   getAllLists(): Promise<List[]>;
 }

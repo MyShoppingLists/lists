@@ -8,12 +8,22 @@ export class InMemoryListRepository implements IListRepository {
     return this.lists;
   }
 
-  async save(): Promise<void> {
-    this.lists.push(List.create('new List'));
+  async create(list: List): Promise<void> {
+    this.lists.push(list);
   }
 
-  async getList(): Promise<List> {
-    console.log('INFO - List: ', this.lists[0]);
+  async getList(id: string): Promise<List> {
+    console.log(
+      'INFO - List: ',
+      this.lists.find((l) => l.id.value === id),
+    );
+
+    if (id) {
+      const list = this.lists.find((l) => l.id.value === id);
+      if (!list) throw new Error();
+      return list;
+    }
+
     return this.lists[0];
   }
 }

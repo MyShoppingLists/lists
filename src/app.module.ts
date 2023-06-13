@@ -3,10 +3,9 @@ import { ListController } from './list/infrastructure/controllers/list.controlle
 import { providers } from './providers';
 import { GetList } from './list/application/useCases/GetList';
 
-const { ListRepository } = providers;
 @Module({
   imports: [],
   controllers: [ListController],
-  providers: [GetList, ListRepository],
+  providers: providers,
 })
 export class AppModule {}
